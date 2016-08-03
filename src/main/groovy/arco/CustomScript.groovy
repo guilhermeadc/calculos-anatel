@@ -1,0 +1,32 @@
+package arco
+
+/**
+ * Created by guilhermeadc on 02/08/16.
+ */
+abstract class CustomScript extends groovy.lang.Script {
+
+    //Variáveis disponíveis dentro  do contexto de execução das fórmulas
+    def DATA_REFERENCIA = new Date();
+
+    //Funções disponíveis dentro  do contexto de execução das fórmulas
+    def MAXIMO(def valor1, def valor2){
+        return Math.max(valor1, valor2);
+    }
+
+    def MINIMO(def valor1, def valor2){
+        return Math.min(valor1, valor2);
+    }
+
+    def SE(Boolean condicao, Object resultado1, Object resultado2){
+        return condicao ? resultado1 : resultado2
+    }
+
+    def VALIDACAO(Boolean condicao, String mensagem){
+        assert condicao, mensagem
+    }
+
+    //Funções disponíveis dentro do contexto de execução das fórmulas
+    def INDICE_ECONOMICO(String nomeIndice, Date dataInicial, Date dataFinal){
+        return 0
+    }
+}
