@@ -25,6 +25,14 @@ abstract class CustomScript extends groovy.lang.Script {
         assert condicao, mensagem
     }
 
+    def TRUNC(BigDecimal valor, int casasDecimais){
+        return valor.setScale(casasDecimais,BigDecimal.ROUND_DOWN)
+    }
+
+    def TRUNC(Double valor, int casasDecimais){
+        return valor.trunc(casasDecimais)
+    }
+
     //Funções disponíveis dentro do contexto de execução das fórmulas
     def INDICE_ECONOMICO(String nomeIndice, Date dataInicial, Date dataFinal){
         return 0

@@ -46,6 +46,14 @@ class Calculadora {
         return lancamento
     }
 
+    public Lancamento executarFormula(List listaScripts, Lancamento lancamento = null, HashMap parametros = null) {
+        assert listaScripts != null, "Parâmetro [listaScripts] não pode ser nulo."
+        listaScripts.each {
+            this.executarFormula(it, lancamento, parametros)
+        }
+        return lancamento
+    }
+
     //Funções disponíveis dentro do contexto de execução das fórmulas
     def INDICE_ECONOMICO(String nomeIndice, Date dataInicial, Date dataFinal){
         return 0
