@@ -13,7 +13,7 @@ class Calculadora {
     def DATA_REFERENCIA = new Date()
 
     private final String[] localizacaoFormular = ["src/main/resources/formulas", "src/main/resources/formulas/multaDeMora",
-        "src/main/resources/formulas/jurosDeMora", "src/main/resources/formulas/atualizacaoMonetaria", "src/main/resources/formulas/multaDeEdital"]
+        "src/main/resources/formulas/jurosDeMora", "src/main/resources/formulas/correcaoMonetaria", "src/main/resources/formulas/multaDeOficio"]
 
     public Calculadora() {
         def config = new CompilerConfiguration()

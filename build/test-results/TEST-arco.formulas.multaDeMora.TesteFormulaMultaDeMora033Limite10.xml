@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="arco.formulas.multaDeMora.TesteFormulaMultaDeMora033Limite10" tests="2" skipped="0" failures="0" errors="0" timestamp="2016-08-03T18:29:50" hostname="IdeaPad-Z400" time="0.274">
-  <properties/>
-  <testcase name="Teste de calculo de multa de mora" classname="arco.formulas.multaDeMora.TesteFormulaMultaDeMora033Limite10" time="0.23"/>
-  <testcase name="Teste de calculo de multa de mora sem data de vencimento" classname="arco.formulas.multaDeMora.TesteFormulaMultaDeMora033Limite10" time="0.044"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="arco.FormulaTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-08-03T12:51:53" hostname="IdeaPad-Z400" time="0.215">
-  <properties/>
-  <testcase name="INDICE_ECONOMICO" classname="arco.FormulaTest" time="0.215"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

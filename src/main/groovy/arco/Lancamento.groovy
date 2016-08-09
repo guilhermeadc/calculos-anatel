@@ -5,21 +5,22 @@ package arco
 
 class Lancamento {
 
-    boolean suspencaoExigibilidade
-    Date dataLancamento
-    Date dataVencimento
+    boolean houveSuspencaoExigibilidade
+    Date dataLancamento = null
+    Date dataVencimento = null
+    Date dataPagamento = null
 
-    double valorOriginal = BigDecimal.ZERO
-    double jurosMora = BigDecimal.ZERO
-    double multaMora = BigDecimal.ZERO
-    double multaOficio = BigDecimal.ZERO
-    double atualizacaoMonetaria = BigDecimal.ZERO
+    BigDecimal valorOriginal = BigDecimal.ZERO
+    BigDecimal jurosMora = BigDecimal.ZERO
+    BigDecimal multaMora = BigDecimal.ZERO
+    BigDecimal multaOficio = BigDecimal.ZERO
+    BigDecimal atualizacaoMonetaria = BigDecimal.ZERO
 
-    double getValorTotal(){
+    BigDecimal getValorTotal(){
         return valorOriginal + jurosMora + multaMora + multaOficio + atualizacaoMonetaria
     }
 
-    double getValorAtualizado(){
+    BigDecimal getValorAtualizado(){
         return valorOriginal + atualizacaoMonetaria
     }
 

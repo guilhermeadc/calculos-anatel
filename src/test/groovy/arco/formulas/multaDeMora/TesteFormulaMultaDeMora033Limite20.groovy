@@ -22,9 +22,10 @@ class TesteFormulaMultaDeMora033Limite20 extends Specification {
 
     def "Teste de calculo de multa de mora"() {
         setup:
-        calculadora.DATA_REFERENCIA = Date.parse("d/M/yyyy", data_atual)
+        calculadora.DATA_REFERENCIA = data_atual ? Date.parse("d/M/yyyy", data_atual) : null
+        lancamento.dataVencimento = data_vencimento ? Date.parse("d/M/yyyy", data_vencimento) : null
+        lancamento.dataPagamento = data_pagamento ? Date.parse("d/M/yyyy", data_pagamento) : null
         lancamento.valorOriginal = valor_original
-        lancamento.dataVencimento = Date.parse("d/M/yyyy", data_vencimento)
 
         expect:
         def resultado = calculadora.executarFormula(script, lancamento, parametros)
@@ -32,13 +33,20 @@ class TesteFormulaMultaDeMora033Limite20 extends Specification {
         resultado.valorTotal == valor_total
 
         where:
-        valor_original | data_vencimento | data_atual   || multa_mora | valor_total
-        1000.00        | "01/06/2016"    | "01/05/2016" || 0          | 1000.00      //Data atual inferior ao dia de vencimento (0 dias de atraso)
-        1000.00        | "01/06/2016"    | "01/06/2016" || 0          | 1000.00      //Data atual igual ao dia de vencimento (0 dias de atraso)
-        1000.00        | "01/06/2016"    | "02/06/2016" || 3.30       | 1003.30      //Data atual posterior a data de vencimento (1 dias de atraso)
-        1000.00        | "01/06/2016"    | "01/07/2016" || 99.00      | 1099.00      //Data atual 1 mês posterior a data de vencimento (30 dias de atraso)
-        1000.00        | "01/06/2015"    | "01/01/2016" || 200.00     | 1200.00      //Data atual 6 mês posterior a data de vencimento. Multa limitada à 20%
-          88.52        | "31/03/2014"    | "03/08/2016" ||  17.70     | 88.52 + 17.70
+        valor_original | data_vencimento | data_pagamento | data_atual   || multa_mora | valor_total
+        1000.00        | "01/06/2016"    | null           | "01/05/2016" || 0          | 1000.00
+        1000.00        | "01/06/2016"    | null           | "01/06/2016" || 0          | 1000.00
+        1000.00        | "01/06/2016"    | null           | "02/06/2016" || 3.30       | 1003.30
+        1000.00        | "01/06/2016"    | null           | "01/07/2016" || 99.00      | 1099.00
+        1000.00        | "01/06/2015"    | null           | "01/01/2016" || 200.00     | 1200.00
+          88.52        | "31/03/2014"    | null           | "03/08/2016" ||  17.70     | 88.52 + 17.70
+        1000.00        | "01/06/2016"    | "01/05/2016"   | "01/01/2050" || 0          | 1000.00
+        1000.00        | "01/06/2016"    | "01/06/2016"   | "01/01/2050" || 0          | 1000.00
+        1000.00        | "01/06/2016"    | "02/06/2016"   | "01/01/2050" || 3.30       | 1003.30
+        1000.00        | "01/06/2016"    | "01/07/2016"   | "01/01/2050" || 99.00      | 1099.00
+        1000.00        | "01/06/2015"    | "01/01/2016"   | "01/01/2050" || 200.00     | 1200.00
+          88.52        | "31/03/2014"    | "03/08/2016"   | "01/01/2050" ||  17.70     | 88.52 + 17.70
+
     }
 
     def "Teste de calculo de multa de mora sem data de vencimento"() {

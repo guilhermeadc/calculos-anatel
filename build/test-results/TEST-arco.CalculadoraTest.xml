@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="arco.CalculadoraTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-08-03T18:33:42" hostname="IdeaPad-Z400" time="0.585">
-  <properties/>
-  <testcase name="CalcularFormula" classname="arco.CalculadoraTest" time="0.585"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

@@ -1,5 +1,7 @@
 package arco
 
+import java.math.RoundingMode
+
 /**
  * Created by guilhermeadc on 02/08/16.
  */
@@ -26,11 +28,12 @@ abstract class CustomScript extends groovy.lang.Script {
     }
 
     def TRUNC(BigDecimal valor, int casasDecimais){
-        return valor.setScale(casasDecimais,BigDecimal.ROUND_DOWN)
+        return valor.setScale(casasDecimais, BigDecimal.ROUND_DOWN)
     }
 
     def TRUNC(Double valor, int casasDecimais){
-        return valor.trunc(casasDecimais)
+        BigDecimal resultado = new BigDecimal(valor.toString())
+        return resultado.setScale(casasDecimais, BigDecimal.ROUND_DOWN)
     }
 
     //Funções disponíveis dentro do contexto de execução das fórmulas
