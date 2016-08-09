@@ -3,7 +3,7 @@ package formulas.multaDeMora
 VALIDACAO(lancamento.dataVencimento != null, 'Data de vencimento não pode ser nulo.')
 
 // Calcula quantidade de dias em atraso
-def mesReferenciaFinal = (lancamento.dataPagamento ?: DATA_REFERENCIA)
+def mesReferenciaFinal = MINIMO(lancamento.dataPagamento ?: DATA_REFERENCIA, DATA_REFERENCIA)
 def diasEmAtraso = MAXIMO(mesReferenciaFinal - lancamento.dataVencimento, 0)
 
 // Determina o percentual de multa a ser aplicado

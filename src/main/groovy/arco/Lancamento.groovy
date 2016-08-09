@@ -7,6 +7,7 @@ class Lancamento {
 
     boolean houveSuspencaoExigibilidade
     Date dataLancamento = null
+    Date dataCompetencia = null
     Date dataVencimento = null
     Date dataPagamento = null
 
@@ -15,6 +16,8 @@ class Lancamento {
     BigDecimal multaMora = BigDecimal.ZERO
     BigDecimal multaOficio = BigDecimal.ZERO
     BigDecimal atualizacaoMonetaria = BigDecimal.ZERO
+    BigDecimal valorPago = BigDecimal.ZERO
+
 
     BigDecimal getValorTotal(){
         return valorOriginal + jurosMora + multaMora + multaOficio + atualizacaoMonetaria
@@ -24,4 +27,11 @@ class Lancamento {
         return valorOriginal + atualizacaoMonetaria
     }
 
+    BigDecimal getSaldoLancamento(){
+        return valorTotal - valorPago
+    }
+
+    boolean getHouvePagamentoParcial() {
+        return valorPago < valorTotal
+    }
 }
