@@ -1,10 +1,10 @@
 package formulas.multaDeMora
 
 /***********************************************************************************************************
- * Cálculo de Multa de Mora para Multas sem Suspenção de Exigibilidade
+ * Cálculo de Multa de Mora para Multas sem Suspenção de Exigibilidade anteriores à 17/05/2016
 
- Multas sem a interposição de recurso administrativo ou tendo sido negado o pedido de
- efeito suspensivo
+ Multas sem a interposição de recurso administrativo ou tendo sido negado o pedido de efeito suspensivo
+
  Regras de Atualização
  Para o cálculo da atualização das multas que se enquadram nesta situação, há que combinar o
  exposto na Resolução 344, com o anexo do Informe nº 19-ADPF/SA
@@ -14,22 +14,28 @@ package formulas.multaDeMora
 VALIDACAO(lancamento.dataVencimento != null, 'Data de vencimento não pode ser nulo')
 
 def dataResolucaoAnatel589_2012 = Date.parse("d/MM/yyyy", "17/05/2012")
-if(!lancamento.houveSuspencaoExigibilidade && lancamento.dataCompetencia < dataResolucaoAnatel589_2012){
+if(!lancamento.houveSuspencaoExigibilidade && lancamento.dataCompetencia < dataResolucaoAnatel589_2012) {
 
     if(lancamento.houvePagamentoParcial
+            && lancamento.dataPagamento != null
             && parametros["DATA_AVISO_RECEBIMENTO"] != null
-            && lancamento.dataPagamento <= parametros["DATA_AVISO_RECEBIMENTO"] + 30
+            && parametros["DATA_AVISO_RECEBIMENTO"] + 30 >= lancamento.dataPagamento
             && lancamento.valorPago >= lancamento.valorOriginal) {
         lancamento.multaMora = 0.00
     } else {
         // Calcula quantidade de dias em atraso
+        def mesReferenciaInicial = (parametros["DATA_AVISO_RECEBIMENTO"] != null) ? parametros["DATA_AVISO_RECEBIMENTO"] + 31 : lancamento.dataVencimento
+
+        //TODO: Tratar o caso de entendimento sobre a data de pagamento para pagamentos parciais
         def mesReferenciaFinal = MINIMO(lancamento.dataPagamento ?: DATA_REFERENCIA, DATA_REFERENCIA)
-        def diasEmAtraso = MAXIMO(mesReferenciaFinal - lancamento.dataVencimento, 0)
+        def diasEmAtraso = MAXIMO(mesReferenciaFinal - mesReferenciaInicial, 0)
 
         // Determina o percentual de multa a ser aplicado
-        def taxa = MINIMO(diasEmAtraso * 0.0033, 0.10)
+        def dataMudancaRegimento = Date.parse("d/M/yyyy", "03/12/2008");
+        def limite = SE(lancamento.dataVencimento >= dataMudancaRegimento, 0.20, 0.10)
+        def taxa = MINIMO(diasEmAtraso * 0.0033, limite)
 
         // Calculo da multa de mora considerando apenas 2 casas decimais
-        lancamento.multaMora = TRUNC((lancamento.valorOriginal * taxa), 2)
+        lancamento.multaMora = TRUNC(lancamento.valorOriginal * taxa, 2)
     }
 }

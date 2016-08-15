@@ -32,6 +32,6 @@ class Lancamento {
     }
 
     boolean getHouvePagamentoParcial() {
-        return valorPago < valorTotal
+        return saldoLancamento > 0
     }
 }

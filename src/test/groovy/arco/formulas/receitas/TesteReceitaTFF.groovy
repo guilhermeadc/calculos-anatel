@@ -10,8 +10,7 @@ import com.xlson.groovycsv.CsvParser
  */
 class TesteReceitaTFF extends Specification {
 
-    def script = ["formula_multa_mora_033_limite_20.groovy",
-                  "formula_juros_mora_selic.groovy"]
+    def script = ["MULTA_MORA_002.groovy", "JUROS_MORA_001.groovy"]
     def calculadora = null
     def lancamento = null
     def parametros = null

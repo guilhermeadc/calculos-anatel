@@ -1,7 +1,7 @@
 package formulas.multaDeMora
 
 /***********************************************************************************************************
- * Cálculo de Multa de Mora para Multas sem Suspenção de Exigibilidade
+ * Cálculo de Multa de Mora para Multas sem Suspenção de Exigibilidade posteriores à 17/05/2016
 
  Art. 36. Quando não houver pagamento da multa nos prazos definidos neste Capítulo, o seu valor deve ser
  acrescido dos seguintes encargos:

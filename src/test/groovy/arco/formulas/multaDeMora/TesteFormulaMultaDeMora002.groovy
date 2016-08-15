@@ -7,9 +7,9 @@ import spock.lang.Specification
 /**
  * Created by guilhermeadc on 10/05/16.
  */
-class TesteFormulaMultaDeMora033Limite20 extends Specification {
+class TesteFormulaMultaDeMora002 extends Specification {
 
-    def script = "formula_multa_mora_033_limite_20.groovy"
+    def script = "MULTA_MORA_002.groovy"
     def calculadora = null
     def lancamento = null
     def parametros = null
