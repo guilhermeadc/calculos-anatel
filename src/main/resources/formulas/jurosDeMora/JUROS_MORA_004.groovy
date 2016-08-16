@@ -9,6 +9,7 @@ if(lancamento.dataCompetencia >= dataResolucaoAnatel589_2012
         && lancamento.houveSuspencaoExigibilidade
         && parametros["DATA_CONSTITUICAO_MULTA"] != null) {
 
+    //TODO: Verificar se a data de compoetência realmente é a data de intimação da multa
     // Considera a juros a partir do primeiro dia do mês subseqüente ao vencimento do prazo...
     def mesReferenciaInicial = parametros["DATA_CONSTITUICAO_MULTA"] + 30
     def mesInicio = mesReferenciaInicial.copyWith(date: 01, month: mesReferenciaInicial[Calendar.MONTH] + 1)
