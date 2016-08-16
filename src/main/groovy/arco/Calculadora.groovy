@@ -12,8 +12,8 @@ class Calculadora {
     def logUltimoCalculo = null
     def DATA_REFERENCIA = new Date()
 
-    private final String[] localizacaoFormular = ["src/main/resources/formulas", "src/main/resources/formulas/multaDeMora",
-        "src/main/resources/formulas/jurosDeMora", "src/main/resources/formulas/correcaoMonetaria", "src/main/resources/formulas/multaDeOficio"]
+    private final String[] localizacaoFormular = ["src/main/resources/formulas/", "src/main/resources/formulas/multaDeMora/",
+        "src/main/resources/formulas/jurosDeMora/", "src/main/resources/formulas/correcaoMonetaria/", "src/main/resources/formulas/multaDeOficio/"]
 
     public Calculadora() {
         def config = new CompilerConfiguration()
@@ -55,7 +55,7 @@ class Calculadora {
     }
 
     //Funções disponíveis dentro do contexto de execução das fórmulas
-    def INDICE_ECONOMICO(String nomeIndice, Date dataInicial, Date dataFinal){
+    public int INDICE_ECONOMICO(String nomeIndice, Date dataInicial, Date dataFinal){
         return 0
     }
 }

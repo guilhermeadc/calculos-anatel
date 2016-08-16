@@ -33,41 +33,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="JUROS_MORA_005.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/formulas/jurosDeMora/JUROS_MORA_005.groovy">
+      <file leaf-file-name="TesteFormulaAtualizacaoMonetaria001.groovy" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/groovy/arco/formulas/correcaoMonetaria/TesteFormulaAtualizacaoMonetaria001.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="43" />
-              <folding />
+            <state vertical-scroll-proportion="0.64089775">
+              <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+              <folding>
+                <element signature="e#41#64#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TesteFormulaJurosDeMora004.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/groovy/arco/formulas/jurosDeMora/TesteFormulaJurosDeMora004.groovy">
+      <file leaf-file-name="ATUALIZACAO_MONETARIA_001.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/formulas/correcaoMonetaria/ATUALIZACAO_MONETARIA_001.groovy">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="65" column="148" selection-start-line="65" selection-start-column="148" selection-end-line="65" selection-end-column="148" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JUROS_MORA_004.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/formulas/jurosDeMora/JUROS_MORA_004.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TesteFormulaJurosDeMora005.groovy" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/groovy/arco/formulas/jurosDeMora/TesteFormulaJurosDeMora005.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8204489">
-              <caret line="46" column="78" selection-start-line="46" selection-start-column="78" selection-end-line="46" selection-end-column="78" />
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -406,12 +388,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/formulas/formula_multa_mora_033_limite_20.groovy" />
-        <option value="$PROJECT_DIR$/src/main/resources/formulas/formula_multa_mora_033_limite_10_ou_20_.groovy" />
-        <option value="$PROJECT_DIR$/src/main/resources/formulas/formula_multa_mora_033_limite_10_ou_20.groovy" />
-        <option value="$PROJECT_DIR$/src/main/resources/formulas/formula_multa_mora_033_limite_10.groovy" />
-        <option value="$PROJECT_DIR$/src/test/groovy/arco/formulas/multaDeMora/TesteFormulaJurosDeMoraSelic.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/arco/Calculadora.groovy" />
         <option value="$PROJECT_DIR$/src/main/resources/formulas/multaDeMora/formula_multa_mora_033_receita_multa.groovy" />
         <option value="$PROJECT_DIR$/src/main/resources/formulas/jurosDeMora/formula_juros_mora_selic.groovy" />
         <option value="$PROJECT_DIR$/src/main/resources/formulas/multaDeMora/formula_multa_mora_033_limite_10.groovy" />
@@ -423,24 +399,19 @@
         <option value="$PROJECT_DIR$/src/main/resources/formulas/multaDeMora/formula_multa_mora_receita_multa_resolucao_589_2012.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/arco/CustomScript.groovy" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/groovy/arco/Lancamento.groovy" />
         <option value="$PROJECT_DIR$/src/main/resources/formulas/multaDeMora/formula_multa_mora_receita_multa_anterior_resolucao_589_2012.groovy" />
         <option value="$PROJECT_DIR$/src/test/groovy/arco/formulas/multaDeMora/TesteFormulaMultaDeMora033Limite10.groovy" />
         <option value="$PROJECT_DIR$/src/test/groovy/arco/formulas/multaDeMora/TesteFormulaMultaDeMora033Limite20.groovy" />
         <option value="$PROJECT_DIR$/src/test/groovy/arco/formulas/multaDeMora/TesteFormulaMultaDeMora033Limite10ou20.groovy" />
-        <option value="$PROJECT_DIR$/src/test/groovy/arco/formulas/receitas/TesteReceitaTFF.groovy" />
         <option value="$PROJECT_DIR$/src/main/resources/formulas/jurosDeMora/JUROS_MORA_002.groovy" />
         <option value="$PROJECT_DIR$/src/test/groovy/arco/formulas/multaDeMora/TesteFormulaJurosDeMora033Limite20ReceitaMultaResolucao589_2012.groovy" />
         <option value="$PROJECT_DIR$/src/test/groovy/arco/formulas/jurosDeMora/TesteFormulaJurosDeMora033Limite20ReceitaMultaResolucao589_2012.groovy" />
         <option value="$PROJECT_DIR$/src/test/groovy/arco/formulas/jurosDeMora/TesteFormulaJurosDeMoraSelic.groovy" />
         <option value="$PROJECT_DIR$/src/test/groovy/arco/formulas/jurosDeMora/TesteFormulaJurosMora002.groovy" />
         <option value="$PROJECT_DIR$/src/test/groovy/arco/formulas/jurosDeMora/TesteFormulaJurosMora003.groovy" />
-        <option value="$PROJECT_DIR$/src/main/resources/formulas/multaDeMora/MULTA_MORA_004.groovy" />
         <option value="$PROJECT_DIR$/src/main/resources/formulas/multaDeMora/MULTA_MORA_006.groovy" />
         <option value="$PROJECT_DIR$/src/test/groovy/arco/formulas/multaDeMora/TesteFormulaMultaDeMora006.groovy" />
         <option value="$PROJECT_DIR$/src/test/groovy/arco/formulas/multaDeMora/TesteFormulaMultaDeMora033Limite20ReceitaMultaResolucao589_2012.groovy" />
-        <option value="$PROJECT_DIR$/src/main/resources/formulas/multaDeMora/MULTA_MORA_005.groovy" />
-        <option value="$PROJECT_DIR$/src/main/resources/formulas/multaDeMora/MULTA_MORA_003.groovy" />
         <option value="$PROJECT_DIR$/src/main/resources/formulas/multaDeMora/MULTA_MORA_007.groovy" />
         <option value="$PROJECT_DIR$/src/test/groovy/arco/formulas/multaDeMora/TesteFormulaMultaDeMora007.groovy" />
         <option value="$PROJECT_DIR$/src/test/groovy/arco/formulas/multaDeMora/TesteFormulaMultaDeMora033Limite20ReceitaMultaAnteriorResolucao589_2012.groovy" />
@@ -450,13 +421,24 @@
         <option value="$PROJECT_DIR$/src/test/groovy/arco/formulas/multaDeMora/TesteFormulaMultaDeMora005ReceitaMultaAnteriorResolucao589_2012.groovy" />
         <option value="$PROJECT_DIR$/src/test/groovy/arco/formulas/multaDeMora/TesteFormulaMultaDeMora004.groovy" />
         <option value="$PROJECT_DIR$/src/test/groovy/arco/formulas/jurosDeMora/TesteFormulaJurosDeMora001.groovy" />
-        <option value="$PROJECT_DIR$/src/main/resources/formulas/jurosDeMora/JUROS_MORA_004.groovy" />
-        <option value="$PROJECT_DIR$/src/main/resources/formulas/jurosDeMora/JUROS_MORA_005.groovy" />
         <option value="$PROJECT_DIR$/src/test/groovy/arco/formulas/jurosDeMora/TesteFormulaJurosDeMora003.groovy" />
         <option value="$PROJECT_DIR$/src/test/groovy/arco/formulas/multaDeMora/TesteFormulaMultaDeMora005.groovy" />
         <option value="$PROJECT_DIR$/src/main/resources/formulas/jurosDeMora/JUROS_MORA_003.groovy" />
+        <option value="$PROJECT_DIR$/src/main/resources/formulas/jurosDeMora/JUROS_MORA_004.groovy" />
         <option value="$PROJECT_DIR$/src/test/groovy/arco/formulas/jurosDeMora/TesteFormulaJurosDeMora004.groovy" />
         <option value="$PROJECT_DIR$/src/test/groovy/arco/formulas/jurosDeMora/TesteFormulaJurosDeMora005.groovy" />
+        <option value="$PROJECT_DIR$/src/main/resources/formulas/jurosDeMora/JUROS_MORA_005.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/arco/Lancamento.groovy" />
+        <option value="$PROJECT_DIR$/src/main/resources/formulas/correcaoMonetaria/ATUALIZACAO_001.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/arco/Calculadora.groovy" />
+        <option value="$PROJECT_DIR$/src/test/groovy/arco/formulas/receitas/TesteReceitaTFF.groovy" />
+        <option value="$PROJECT_DIR$/src/main/resources/formulas/multaDeMora/MULTA_MORA_005.groovy" />
+        <option value="$PROJECT_DIR$/src/main/resources/formulas/multaDeMora/MULTA_MORA_004.groovy" />
+        <option value="$PROJECT_DIR$/src/main/resources/formulas/multaDeMora/MULTA_MORA_003.groovy" />
+        <option value="$PROJECT_DIR$/src/main/resources/formulas/multaDeMora/MULTA_MORA_002.groovy" />
+        <option value="$PROJECT_DIR$/src/main/resources/formulas/multaDeMora/MULTA_MORA_001.groovy" />
+        <option value="$PROJECT_DIR$/src/main/resources/formulas/correcaoMonetaria/ATUALIZACAO_MONETARIA_001.groovy" />
+        <option value="$PROJECT_DIR$/src/test/groovy/arco/formulas/correcaoMonetaria/TesteFormulaAtualizacaoMonetaria001.groovy" />
       </list>
     </option>
   </component>
@@ -734,6 +716,10 @@
               <option name="myItemId" value="formulas" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="correcaoMonetaria" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -860,6 +846,36 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="formulas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="correcaoMonetaria" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FormulaCalculo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FormulaCalculo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -934,7 +950,35 @@
       <recent name="arco.formulas" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Test FormulasCalculo">
+  <component name="RunManager" selected="Gradle.TesteFormulaAtualizacaoMonetaria001">
+    <configuration default="false" name="ATUALIZACAO_MONETARIA_001" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
+      <module name="FormulaCalculo" />
+      <setting name="path" value="file://$PROJECT_DIR$/src/main/resources/formulas/correcaoMonetaria/ATUALIZACAO_MONETARIA_001.groovy" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/resources/formulas/correcaoMonetaria" />
+      <setting name="debug" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="TesteFormulaAtualizacaoMonetaria001" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests arco.formulas.correcaoMonetaria.TesteFormulaAtualizacaoMonetaria001" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="cleanTest" />
+            <option value="test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -1110,9 +1154,17 @@
       </ExternalSystemSettings>
       <method />
     </configuration>
-    <list size="1">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Gradle.Test FormulasCalculo" />
+      <item index="1" class="java.lang.String" itemvalue="Groovy.ATUALIZACAO_MONETARIA_001" />
+      <item index="2" class="java.lang.String" itemvalue="Gradle.TesteFormulaAtualizacaoMonetaria001" />
     </list>
+    <recent_temporary>
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Gradle.TesteFormulaAtualizacaoMonetaria001" />
+        <item index="1" class="java.lang.String" itemvalue="Groovy.ATUALIZACAO_MONETARIA_001" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration">
@@ -1142,6 +1194,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23088685" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12232416" sideWeight="0.50276244" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1150,14 +1203,13 @@
       <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3440367" sideWeight="0.49723756" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24072613" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24072613" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45259938" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23088685" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1212,8 +1264,14 @@
           <properties />
           <option name="timeStamp" value="27" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/resources/formulas/correcaoMonetaria/ATUALIZACAO_MONETARIA_001.groovy</url>
+          <line>16</line>
+          <properties />
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="28" />
+      <option name="time" value="29" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
@@ -1235,22 +1293,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/groovy/arco/formulas/jurosDeMora/TesteFormulaJurosDeMora001.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="72" selection-start-line="41" selection-start-column="72" selection-end-line="41" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/formulas/multaDeMora/MULTA_MORA_002.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/groovy/arco/formulas/multaDeMora/TesteFormulaMultaDeMora002.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1272,7 +1314,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
           <folding>
-            <element signature="e#35#58#0" expanded="false" />
+            <element signature="e#35#58#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1388,14 +1430,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/arco/Calculadora.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6131387">
-          <caret line="14" column="78" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/jdk1.8.0_40/src.zip!/java/lang/Math.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.052785926">
@@ -1433,23 +1467,6 @@
           <folding>
             <element signature="n#!!doc" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/groovy/arco/formulas/receitas/TesteReceitaTFF.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="58" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="58" />
-          <folding>
-            <element signature="e#35#58#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/formulas/jurosDeMora/JUROS_MORA_001.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="20" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -1509,72 +1526,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/formulas/multaDeMora/MULTA_MORA_001.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/formulas/multaDeMora/MULTA_MORA_002.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/formulas/multaDeMora/MULTA_MORA_004.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="95" selection-start-line="3" selection-start-column="95" selection-end-line="3" selection-end-column="95" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/formulas/multaDeMora/MULTA_MORA_005.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="56" selection-start-line="26" selection-start-column="56" selection-end-line="26" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/formulas/jurosDeMora/JUROS_MORA_002.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3840399">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="36" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/arco/Lancamento.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
-          <folding>
-            <element signature="e#13#60#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/formulas/multaDeMora/MULTA_MORA_006.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/formulas/multaDeMora/MULTA_MORA_003.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3272727">
-          <caret line="6" column="75" selection-start-line="6" selection-start-column="75" selection-end-line="6" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/groovy/arco/formulas/jurosDeMora/TesteFormulaJurosDeMora003.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1599,14 +1550,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/formulas/jurosDeMora/JUROS_MORA_003.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2917706">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/groovy/arco/formulas/multaDeMora/TesteFormulaMultaDeMora003.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.648379">
@@ -1615,18 +1558,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/formulas/jurosDeMora/JUROS_MORA_004.groovy">
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/arco/Lancamento.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
+          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+          <folding>
+            <element signature="e#13#60#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/formulas/jurosDeMora/JUROS_MORA_005.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="43" />
+          <caret line="14" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/formulas/jurosDeMora/JUROS_MORA_004.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0773067">
+          <caret line="24" column="79" selection-start-line="24" selection-start-column="79" selection-end-line="24" selection-end-column="79" />
           <folding />
         </state>
       </provider>
@@ -1634,16 +1587,124 @@
     <entry file="file://$PROJECT_DIR$/src/test/groovy/arco/formulas/jurosDeMora/TesteFormulaJurosDeMora004.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="65" column="148" selection-start-line="65" selection-start-column="148" selection-end-line="65" selection-end-column="148" />
+          <caret line="70" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/groovy/arco/formulas/jurosDeMora/TesteFormulaJurosDeMora005.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8204489">
-          <caret line="46" column="78" selection-start-line="46" selection-start-column="78" selection-end-line="46" selection-end-column="78" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="66" column="34" selection-start-line="0" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/arco/Calculadora.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.62842894">
+          <caret line="14" column="91" selection-start-line="14" selection-start-column="91" selection-end-line="14" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/groovy/arco/formulas/receitas/TesteReceitaTFF.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#35#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/formulas/multaDeMora/MULTA_MORA_006.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6932668">
+          <caret line="20" column="74" selection-start-line="20" selection-start-column="74" selection-end-line="20" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/formulas/multaDeMora/MULTA_MORA_005.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23690774">
+          <caret line="30" column="78" selection-start-line="30" selection-start-column="78" selection-end-line="30" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/formulas/multaDeMora/MULTA_MORA_004.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5062344">
+          <caret line="22" column="79" selection-start-line="22" selection-start-column="79" selection-end-line="22" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/formulas/multaDeMora/MULTA_MORA_003.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2693267">
+          <caret line="6" column="74" selection-start-line="6" selection-start-column="74" selection-end-line="6" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/formulas/multaDeMora/MULTA_MORA_002.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2693267">
+          <caret line="6" column="75" selection-start-line="6" selection-start-column="75" selection-end-line="6" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/formulas/multaDeMora/MULTA_MORA_001.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2693267">
+          <caret line="6" column="75" selection-start-line="6" selection-start-column="75" selection-end-line="6" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/formulas/jurosDeMora/JUROS_MORA_003.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.40399003">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/formulas/jurosDeMora/JUROS_MORA_002.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3840399">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="36" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/formulas/jurosDeMora/JUROS_MORA_001.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="20" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/formulas/correcaoMonetaria/ATUALIZACAO_MONETARIA_001.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/groovy/arco/formulas/correcaoMonetaria/TesteFormulaAtualizacaoMonetaria001.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.64089775">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding>
+            <element signature="e#41#64#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
