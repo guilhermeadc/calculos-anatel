@@ -1,7 +1,7 @@
 package formulas.multaDeMora
 
 /***********************************************************************************************************
- * Cálculo de Juros de Mora para Multas com Suspenção de Exigibilidade posteriores à 17/05/2016
+ * Cálculo de Juros de Mora para Multas com Suspenção de Exigibilidade posteriores à Resolução Anatel no 589/2012
  **********************************************************************************************************/
 
 def dataResolucaoAnatel589_2012 = Date.parse("d/MM/yyyy", "17/05/2012")

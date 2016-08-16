@@ -1,7 +1,7 @@
 package formulas.multaDeMora
 
 /***********************************************************************************************************
- * Cálculo de Multa de Mora para Multas com Suspenção de Exigibilidade anterior à 17/05/2016
+ * Cálculo de Multa de Mora para Multas com Suspenção de Exigibilidade anterior à Resolução Anatel no 589/2012
 
  A partir da data de publicação do extrato da decisão final no Diário Oficial da União, conceder-se-á mais 30 dias
  para o recolhimento do valor, sem qualquer tipo de acréscimo.

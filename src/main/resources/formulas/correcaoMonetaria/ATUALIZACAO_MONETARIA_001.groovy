@@ -1,7 +1,7 @@
 package formulas.correcaoMonetaria
 
 /***********************************************************************************************************
- * Cálculo de atualização monetária para Multas com Suspenção de Exigibilidade anteriores à 17/05/2016
+ * Cálculo de atualização monetária para Multas com Suspenção de Exigibilidade anteriores à Resolução Anatel no 589/2012
  *
  * A concessão de efeito suspensivo em sede de recurso administrativo ou pedido de reconsideração
  * suspende a exigência de pagamento da multa desde a data de registro na Anatel até a data da

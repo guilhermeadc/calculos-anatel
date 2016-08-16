@@ -1,9 +1,9 @@
 package formulas.correcaoMonetaria
 
 /***********************************************************************************************************
- * Cálculo de atualização monetária para Multas com Suspenção de Exigibilidade posteriores à 17/05/2016
+ * Cálculo de atualização monetária para Multas com Suspenção de Exigibilidade posteriores à Resolução Anatel no 589/2012
  *
- * Medida Provisória no 449, de 03 de dezembro de 2008
+ * Resolução Anatel no 589/2012
  * § 1o, Art. 34. Tendo sido negado provimento ou seguimento ao recurso
  * administrativo ou ao pedido de reconsideração o valor da multa ser paga deve
  * sofrer correção segundo a Taxa Referencial do Sistema Especial de Liquidação e

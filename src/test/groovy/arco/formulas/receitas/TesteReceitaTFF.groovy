@@ -3,6 +3,7 @@ package arco.formulas.multaDeMora
 import arco.Calculadora
 import arco.Lancamento
 import spock.lang.Specification
+import com.xlson.groovycsv.CsvParser
 
 /**
  * Created by guilhermeadc on 10/05/16.

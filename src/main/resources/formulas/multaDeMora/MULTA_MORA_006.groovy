@@ -1,7 +1,7 @@
 package formulas.multaDeMora
 
 /***********************************************************************************************************
- * Cálculo de Multa de Mora para Multas com Suspenção de Exigibilidade posteriores à 17/05/2016
+ * Cálculo de Multa de Mora para Multas com Suspenção de Exigibilidade posteriores à Resolução Anatel no 589/2012
 
 O novo regulamento inova ao determinar que as multas aplicadas a partir de sua publicação,
 quando da interposição recurso administrativo ou ao pedido de reconsideração, não mais serão
@@ -11,6 +11,7 @@ com referência as datas de intimação e de ciência da decisão definitiva.
  **********************************************************************************************************/
 
 def dataResolucaoAnatel589_2012 = Date.parse("d/MM/yyyy", "17/05/2012")
+
 if(lancamento.dataCompetencia >= dataResolucaoAnatel589_2012
         && lancamento.houveSuspencaoExigibilidade
         && parametros["DATA_CONSTITUICAO_MULTA"] != null) {

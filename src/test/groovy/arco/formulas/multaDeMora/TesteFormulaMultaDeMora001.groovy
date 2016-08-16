@@ -50,7 +50,7 @@ class TesteFormulaMultaDeMora001 extends Specification {
         when: "Quando a fórmula é executada com lancamento sem data de vencimento"
         calculadora.executarFormula(script, lancamento, parametros)
 
-        then:
+        then: "Então é esperado uma exceção"
         thrown(AssertionError)
     }
 }

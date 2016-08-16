@@ -1,7 +1,7 @@
 package formulas.jurosDeMora
 
 /***********************************************************************************************************
- * Cálculo de Juros de Mora para Multas sem Suspenção de Exigibilidade
+ * Cálculo de Juros de Mora para Multas sem Suspenção de Exigibilidade aplicadas antes da Resolução Anatel no 589/2012
 
  Multas sem a interposição de recurso administrativo ou tendo sido negado o pedido de
  efeito suspensivo

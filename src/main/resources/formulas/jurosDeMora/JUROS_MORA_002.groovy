@@ -1,8 +1,9 @@
 package formulas.jurosDeMora
 
 /***********************************************************************************************************
- * Cálculo de Multa de Mora para Multas sem Suspenção de Exigibilidade
+ * Cálculo de Juros de Mora para Multas sem Suspenção de Exigibilidade aplicadas após a Resolução Anatel no 589/2012
 
+ Resolução Anatel no 589/2012
  Art. 36. Quando não houver pagamento da multa nos prazos definidos neste Capítulo, o seu valor deve ser
  acrescido dos seguintes encargos:
 
@@ -13,10 +14,10 @@ package formulas.jurosDeMora
 
  **********************************************************************************************************/
 
-VALIDACAO(lancamento.dataVencimento != null, 'Data de vencimento não pode ser nulo')
-
 def dataResolucaoAnatel589_2012 = Date.parse("d/MM/yyyy", "17/05/2012")
 if(!lancamento.houveSuspencaoExigibilidade && lancamento.dataCompetencia >= dataResolucaoAnatel589_2012){
+
+    VALIDACAO(lancamento.dataVencimento != null, 'Data de vencimento não pode ser nulo')
 
     // Considera a juros a partir do primeiro dia do mês subseqüente ao vencimento do prazo...
     def mesInicio = lancamento.dataVencimento.copyWith(date: 01, month: lancamento.dataVencimento[Calendar.MONTH] + 1)
