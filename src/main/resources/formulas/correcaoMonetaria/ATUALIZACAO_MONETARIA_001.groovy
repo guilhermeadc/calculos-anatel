@@ -16,14 +16,13 @@ package formulas.correcaoMonetaria
 
 def dataResolucaoAnatel589_2012 = Date.parse("d/MM/yyyy", "17/05/2012")
 if(lancamento.dataCompetencia < dataResolucaoAnatel589_2012
-        && lancamento.houveSuspencaoExigibilidade
-        && parametros["DATA_PUBLICAOCAO_DOU"] != null) {
+        && lancamento.houveSuspencaoExigibilidade) {
 
     // Considera a atualização deste a data de aplicação da sanção (data de competência)
     def dataAplicacaoSancao = lancamento.dataCompetencia
 
-    //... até a data de publicação do extrato da decisão final no Diário Oficial da União
-    def dataPublicacaoDOU = parametros["DATA_PUBLICAOCAO_DOU"]
+    //... até a data de publicação do extrato da decisão final no Diário Oficial da União ou a data atual
+    def dataPublicacaoDOU = MINIMO(parametros["DATA_PUBLICAOCAO_DOU"], DATA_REFERENCIA)
 
     // Data de publicação da Medida Provisória 449/2008
     def dataMedidaProvisoria449_2008 = Date.parse("d/MM/yyyy", "03/12/2008")

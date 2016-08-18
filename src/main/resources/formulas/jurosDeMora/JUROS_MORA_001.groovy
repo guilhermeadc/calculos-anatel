@@ -13,7 +13,7 @@ mesFinal = mesReferenciaFinal.copyWith(date: 01, month: mesReferenciaFinal[Calen
 def indiceAcumulado = SE(mesInicio <= mesReferenciaFinal, INDICE_ECONOMICO("SELIC", mesInicio, mesFinal) + 0.01, 0.00)
 
 // Calculo do juros de mora considerando apenas 2 casas decimais
-lancamento.jurosMora = TRUNC((lancamento.valorOriginal * indiceAcumulado),2)
+lancamento.jurosMora = TRUNC(lancamento.valorOriginal * indiceAcumulado, 2)
 
 //Log: Utilizado apenas para validação do cálculo
 LOG_CALCULO["mes_inicio"] = mesInicio.format("MM/yyyy")

@@ -4,6 +4,7 @@ package formulas.multaDeMora
  * Cálculo de Juros de Mora para Multas com Suspenção de Exigibilidade posteriores à Resolução Anatel no 589/2012
  **********************************************************************************************************/
 
+//TODO: Avaliar seguinte declaração: A suspensão da exigibilidade, objeto da medida liminar, não afasta a incidência de juros de mora;
 def dataResolucaoAnatel589_2012 = Date.parse("d/MM/yyyy", "17/05/2012")
 if(lancamento.dataCompetencia >= dataResolucaoAnatel589_2012
         && lancamento.houveSuspencaoExigibilidade

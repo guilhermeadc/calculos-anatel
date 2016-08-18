@@ -18,15 +18,14 @@ package formulas.correcaoMonetaria
 
 def dataResolucaoAnatel589_2012 = Date.parse("d/MM/yyyy", "17/05/2012")
 if(lancamento.dataCompetencia >= dataResolucaoAnatel589_2012
-        && lancamento.houveSuspencaoExigibilidade
-        && parametros["DATA_CONSTITUICAO_MULTA"] != null) {
+        && lancamento.houveSuspencaoExigibilidade) {
 
-    //TODO: Verificar se a data de compoetência realmente é a data de intimação da multa
+    //TODO: Verificar se a data de competência realmente é a data de intimação da multa
     // Considera a atualização deste a data de intimação da multa (data de competência)
     def dataIntimacaoMulta = lancamento.dataCompetencia
 
-    //... até a data de constituição da multa
-    def datatConstituicaoMulta = parametros["DATA_CONSTITUICAO_MULTA"]
+    //... até a data de constituição da multa ou a data atual
+    def datatConstituicaoMulta = MINIMO(parametros["DATA_CONSTITUICAO_MULTA"], DATA_REFERENCIA)
 
     def indiceAcumuladoSelic = INDICE_ECONOMICO("SELIC", dataIntimacaoMulta, datatConstituicaoMulta)
     lancamento.atualizacaoMonetaria = lancamento.valorOriginal * MAXIMO(indiceAcumuladoSelic, 0.00)

@@ -1,10 +1,13 @@
 package arco
 
+import groovy.transform.CompileStatic
+
 import java.math.RoundingMode
 
 /**
  * Created by guilhermeadc on 02/08/16.
  */
+
 abstract class CustomScript extends groovy.lang.Script {
 
     //Variáveis disponíveis dentro  do contexto de execução das fórmulas
@@ -12,25 +15,21 @@ abstract class CustomScript extends groovy.lang.Script {
 
     //Funções disponíveis dentro  do contexto de execução das fórmulas
     def MAXIMO(def valor1, def valor2) {
-        return Math.max(valor1, valor2);
-    }
+        assert valor1 != null || valor2 != null, "Parâmetros [valor1] e [valor2] não podem ser nulos"
 
-    def MAXIMO(Date data1, Date data2) {
-        assert data1 != null, "Parâmetro [data1] não pode ser nulo"
-        assert data2 != null, "Parâmetro [data2] não pode ser nulo"
+        if(valor2 == null)       return valor1
+        else if (valor1 == null) return valor2
 
-        return data1.compareTo(data2) > 0 ? data1 : data2
+        return valor1.compareTo(valor2) >= 0 ? valor1 : valor2
     }
 
     def MINIMO(def valor1, def valor2) {
-        return Math.min(valor1, valor2);
-    }
+        assert valor1 != null || valor2 != null, "Parâmetros [valor1] e [valor2] não podem ser nulos"
 
-    def MINIMO(Date data1, Date data2) {
-        assert data1 != null, "Parâmetro [data1] não pode ser nulo"
-        assert data2 != null, "Parâmetro [data2] não pode ser nulo"
+        if(valor2 == null)       return valor1
+        else if (valor1 == null) return valor2
 
-        return data1.compareTo(data2) < 0 ? data1 : data2
+        return valor1.compareTo(valor2) < 0 ? valor1 : valor2
     }
 
     def SE(Boolean condicao, Object resultado1, Object resultado2) {
