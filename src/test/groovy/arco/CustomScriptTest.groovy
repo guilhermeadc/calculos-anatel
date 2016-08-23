@@ -99,4 +99,94 @@ class CustomScriptTest extends Specification {
         resultado1 == dataValida
         resultado2 == dataValida
     }
+
+    def "Função DATA_ADICIONAR deverá retornar nova data considerando a quantidade de dias adicionados"() {
+        given: "Considerando a data válida 01/06/2016"
+        Date dataTest = new Date(2016, Calendar.JUNE, 01)
+
+        when: "Quando for adicionado 5 dias"
+        def resultado = customScript.DATA_ADICIONAR(dataTest, 05, "D")
+
+        then: "Então a nova data deverá ser 06/06/2016"
+        resultado == new Date(2016, Calendar.JUNE, 06)
+    }
+
+    def "Função DATA_ADICIONAR deverá retornar nova data considerando a quantidade de dias subtraídos"() {
+        given: "Considerando a data válida 01/06/2016"
+        Date dataTest = new Date(2016, Calendar.JUNE, 01)
+
+        when: "Quando for subtraído 5 dias"
+        def resultado = customScript.DATA_ADICIONAR(dataTest, -5, "D")
+
+        then: "Então a nova data deverá ser 27/05/2016"
+        resultado == new Date(2016, Calendar.MAY, 27)
+
+    }
+
+    def "Função DATA_ADICIONAR deverá retornar nova data considerando a quantidade de meses adicionados"() {
+        given: "Considerando a data válida 01/06/2016"
+        Date dataTest = new Date(2016, Calendar.JUNE, 01)
+
+        when: "Quando for adicionado 5 meses"
+        def resultado = customScript.DATA_ADICIONAR(dataTest, 05, "M")
+
+        then: "Então a nova data deverá ser 01/11/2016"
+        resultado == new Date(2016, Calendar.NOVEMBER, 01)
+    }
+
+    def "Função DATA_ADICIONAR deverá retornar nova data considerando a quantidade de meses subtraídos"() {
+        given: "Considerando a data válida 01/06/2016"
+        Date dataTest = new Date(2016, Calendar.JUNE, 01)
+
+        when: "Quando for subtraído 5 meses"
+        def resultado = customScript.DATA_ADICIONAR(dataTest, -5, "M")
+
+        then: "Então a nova data deverá ser 01/01/2016"
+        resultado == new Date(2016, Calendar.JANUARY, 01)
+    }
+
+    def "Função DATA_ADICIONAR deverá retornar nova data considerando a quantidade de meses adicionados acima de 12"() {
+        given: "Considerando a data válida 01/06/2016"
+        Date dataTest = new Date(2016, Calendar.JUNE, 01)
+
+        when: "Quando for adicionado 15 meses"
+        def resultado = customScript.DATA_ADICIONAR(dataTest, 15, "M")
+
+        then: "Então a nova data deverá ser 01/09/2017"
+        resultado == new Date(2017, Calendar.SEPTEMBER, 01)
+    }
+
+    def "Função DATA_ADICIONAR deverá retornar nova data considerando a quantidade de meses subtraídos acima de 12"() {
+        given: "Considerando a data válida 01/06/2016"
+        Date dataTest = new Date(2016, Calendar.JUNE, 01)
+
+        when: "Quando for subtraído 15 meses"
+        def resultado = customScript.DATA_ADICIONAR(dataTest, -15, "M")
+
+        then: "Então a nova data deverá ser 01/03/2015"
+        resultado == new Date(2015, Calendar.MARCH, 01)
+    }
+
+    def "Função DATA_ADICIONAR deverá retornar nova data considerando a quantidade de anos adicionados"() {
+        given: "Considerando a data válida 01/06/2016"
+        Date dataTest = new Date(2016, Calendar.JUNE, 01)
+
+        when: "Quando for adicionado 5 anos"
+        def resultado = customScript.DATA_ADICIONAR(dataTest, 05, "A")
+
+        then: "Então a nova data deverá ser 01/11/2016"
+        resultado == new Date(2021, Calendar.JUNE, 01)
+    }
+
+    def "Função DATA_ADICIONAR deverá retornar nova data considerando a quantidade de anos subtraídos"() {
+        given: "Considerando a data válida 01/06/2016"
+        Date dataTest = new Date(2016, Calendar.JUNE, 01)
+
+        when: "Quando for subtraído 5 anos"
+        def resultado = customScript.DATA_ADICIONAR(dataTest, -5, "A")
+
+        then: "Então a nova data deverá ser 01/01/2011"
+        resultado == new Date(2011, Calendar.JUNE, 01)
+    }
+
 }

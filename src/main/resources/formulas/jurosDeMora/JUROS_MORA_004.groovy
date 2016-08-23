@@ -5,20 +5,20 @@ package formulas.multaDeMora
  **********************************************************************************************************/
 
 //TODO: Avaliar seguinte declaração: A suspensão da exigibilidade, objeto da medida liminar, não afasta a incidência de juros de mora;
-def dataResolucaoAnatel589_2012 = Date.parse("d/MM/yyyy", "17/05/2012")
+def dataResolucaoAnatel589_2012 = DATA("17/05/2012")
 if(lancamento.dataCompetencia >= dataResolucaoAnatel589_2012
         && lancamento.houveSuspencaoExigibilidade
         && parametros["DATA_CONSTITUICAO_MULTA"] != null) {
 
-    //TODO: Verificar se a data de compoetência realmente é a data de intimação da multa
+    //TODO: Verificar se a data de competência realmente é a data de intimação da multa
     // Considera a juros a partir do primeiro dia do mês subseqüente ao vencimento do prazo...
     def mesReferenciaInicial = parametros["DATA_CONSTITUICAO_MULTA"] + 30
     def mesInicio = mesReferenciaInicial.copyWith(date: 01, month: mesReferenciaInicial[Calendar.MONTH] + 1)
 
     //TODO: Tratar o caso de entendimento sobre a data de pagamento para pagamentos parciais
     // ... até o mês anterior ao do pagamento
-    def mesReferenciaFinal = (lancamento.dataPagamento ?: DATA_REFERENCIA)
-    mesFinal = mesReferenciaFinal.copyWith(date: 01, month: mesReferenciaFinal[Calendar.MONTH]) - 1
+    def mesReferenciaFinal = MINIMO(lancamento.dataPagamento ?: DATA_REFERENCIA, DATA_REFERENCIA)
+    def mesFinal = mesReferenciaFinal.copyWith(date: 01, month: mesReferenciaFinal[Calendar.MONTH]) - 1
 
     // ... e de um por cento no mês de pagamento
     def indiceAcumulado = SE(mesInicio <= mesReferenciaFinal, INDICE_ECONOMICO("SELIC", mesInicio, mesFinal) + 0.01, 0.00)
