@@ -26,6 +26,7 @@ class TesteFormulaAtualizacaoMonetaria002 extends Specification {
         lancamento.dataCompetencia = data_competencia ? Date.parse("d/M/yyyy", data_competencia) : null
         lancamento.houveSuspencaoExigibilidade = houve_suspencao_exibilidade
         parametros["DATA_CONSTITUICAO_MULTA"] = data_constituicao ? Date.parse("d/M/yyyy", data_constituicao) : null
+        parametros["DATA_INTIMACAO_MULTA"] = data_competencia ? Date.parse("d/M/yyyy", data_competencia) : null
         calculadora.metaClass.INDICE_ECONOMICO = {String indice, Date b, Date c -> return indice_SELIC}
 
         expect:

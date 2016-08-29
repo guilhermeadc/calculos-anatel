@@ -49,7 +49,7 @@ class TesteFormulaMultaDeMora005 extends Specification {
         1000.00        | 0.00      | 0.00      | "01/06/2016"    | "24/05/2012"     | "02/06/2016"   | false                       | null         | "01/01/2050" || 0.00       | 1000.00
         1000.00        | 0.00      | 0.00      | "01/06/2016"    | "25/05/2012"     | "01/07/2016"   | false                       | null         | "01/01/2050" || 0.00       | 1000.00
         1000.00        | 0.00      | 0.00      | "01/06/2015"    | "26/05/2012"     | "01/01/2016"   | false                       | null         | "01/01/2050" || 0.00       | 1000.00
-//        /* Execução do cálculo considerando data de competência anterior à mudança de regimento em 17/05/2012 */
+        /* Execução do cálculo considerando data de competência anterior à mudança de regimento em 17/05/2012 */
         1000.00        | 0.00      | 0.00      | "01/06/2016"    | "16/05/2012"     | null           | false                       | null         | "01/05/2016" || 0.00       | 1000.00
         1000.00        | 0.00      | 0.00      | "01/06/2016"    | "16/05/2012"     | null           | false                       | null         | "01/06/2016" || 0.00       | 1000.00
         1000.00        | 0.00      | 0.00      | "01/06/2016"    | "16/05/2012"     | null           | false                       | null         | "02/06/2016" || 3.30       | 1003.30

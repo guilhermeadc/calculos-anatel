@@ -22,7 +22,7 @@ if(lancamento.dataCompetencia < dataResolucaoAnatel589_2012
     def diasEmAtraso = MAXIMO(diaReferenciaFinal - diaReferenciaInicial, 0)
 
     // Determina o percentual de multa a ser aplicado
-    def dataMudancaRegimento = Date.parse("d/M/yyyy", "03/12/2008");
+    def dataMudancaRegimento = DATA("03/12/2008");
     def limite = SE(diaReferenciaInicial >= dataMudancaRegimento, 0.20, 0.10)
     def taxa = MINIMO(diasEmAtraso * 0.0033, limite)
 
