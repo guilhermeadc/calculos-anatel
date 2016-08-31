@@ -13,7 +13,7 @@ package formulas.multaDeMora
 
 VALIDACAO(lancamento.dataVencimento != null, 'Data de vencimento não pode ser nulo')
 
-def dataResolucaoAnatel589_2012 = Date.parse("d/MM/yyyy", "17/05/2012")
+dataResolucaoAnatel589_2012 = Date.parse("d/MM/yyyy", "17/05/2012")
 if(!lancamento.houveSuspencaoExigibilidade && lancamento.dataCompetencia < dataResolucaoAnatel589_2012) {
 
     if(lancamento.houvePagamentoParcial
@@ -24,16 +24,16 @@ if(!lancamento.houveSuspencaoExigibilidade && lancamento.dataCompetencia < dataR
         lancamento.multaMora = 0.00
     } else {
         // Calcula quantidade de dias em atraso
-        def mesReferenciaInicial = (parametros["DATA_AVISO_RECEBIMENTO"] != null) ? parametros["DATA_AVISO_RECEBIMENTO"] + 31 : lancamento.dataVencimento
+        mesReferenciaInicial = (parametros["DATA_AVISO_RECEBIMENTO"] != null) ? parametros["DATA_AVISO_RECEBIMENTO"] + 31 : lancamento.dataVencimento
 
         //TODO: Tratar o caso de entendimento sobre a data de pagamento para pagamentos parciais
-        def mesReferenciaFinal = MINIMO(lancamento.dataPagamento ?: DATA_REFERENCIA, DATA_REFERENCIA)
-        def diasEmAtraso = MAXIMO(mesReferenciaFinal - mesReferenciaInicial, 0)
+        mesReferenciaFinal = MINIMO(lancamento.dataPagamento ?: DATA_REFERENCIA, DATA_REFERENCIA)
+        diasEmAtraso = MAXIMO(mesReferenciaFinal - mesReferenciaInicial, 0)
 
         // Determina o percentual de multa a ser aplicado
-        def dataMudancaRegimento = Date.parse("d/M/yyyy", "03/12/2008");
-        def limite = SE(lancamento.dataVencimento >= dataMudancaRegimento, 0.20, 0.10)
-        def taxa = MINIMO(diasEmAtraso * 0.0033, limite)
+        dataMudancaRegimento = Date.parse("d/M/yyyy", "03/12/2008");
+        limite = SE(lancamento.dataVencimento >= dataMudancaRegimento, 0.20, 0.10)
+        taxa = MINIMO(diasEmAtraso * 0.0033, limite)
 
         // Calculo da multa de mora considerando apenas 2 casas decimais
         lancamento.multaMora = TRUNC(lancamento.valorOriginal * taxa, 2)

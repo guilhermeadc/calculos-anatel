@@ -12,12 +12,12 @@ package formulas.correcaoMonetaria
 VALIDACAO(parametros["DATA_ENTREGA_DOCUMENTACAO"] != null, "Data de entrega dos documentos de habilitação não informado")
 VALIDACAO(parametros["DATA_PUBLICACAO_AUTORIZACAO"] != null, "Data de publicação do extrato de autorização não informado")
 
-def dataInicioCobranca = parametros["DATA_ENTREGA_DOCUMENTACAO"]
-def dataFinalCobranca = MINIMO(lancamento.dataPagamento ?: DATA_REFERENCIA, DATA_REFERENCIA)
-def taxaAtualizacao = SE(dataInicioCobranca <= dataFinalCobranca, INDICE_ECONOMICO("IGP-DI", dataInicioCobranca, dataFinalCobranca), 0.00)
+dataInicioCobranca = parametros["DATA_ENTREGA_DOCUMENTACAO"]
+dataFinalCobranca = MINIMO(lancamento.dataPagamento ?: DATA_REFERENCIA, DATA_REFERENCIA)
+taxaAtualizacao = SE(dataInicioCobranca <= dataFinalCobranca, INDICE_ECONOMICO("IGP-DI", dataInicioCobranca, dataFinalCobranca), 0.00)
 lancamento.atualizacaoMonetaria = lancamento.valorOriginal * taxaAtualizacao
 
-def quantidadeMeses = MAXIMO(DATADIF(parametros["DATA_PUBLICACAO_AUTORIZACAO"], dataFinalCobranca, "M"), 0.00)
+quantidadeMeses = MAXIMO(DATADIF(parametros["DATA_PUBLICACAO_AUTORIZACAO"], dataFinalCobranca, "M"), 0.00)
 lancamento.atualizacaoMonetaria += lancamento.valorAtualizado * (quantidadeMeses * 0.01)
 
 // Tratamento de casas decimais para a atualização monetária

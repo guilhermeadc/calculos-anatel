@@ -10,22 +10,22 @@ package formulas.jurosDeMora
 
 VALIDACAO(lancamento.dataVencimento != null, 'Data de vencimento não pode ser nulo.')
 
-def indiceAcumulado = 0.00
-def dataLimiteMudancaRegimento = DATA("31/12/2008")
-def dataInicioCobranca = lancamento.dataVencimento.copyWith(date: 01, month: lancamento.dataVencimento[Calendar.MONTH] + 1)
-def dataFinalCobranca = MINIMO(lancamento.dataPagamento ?: DATA_REFERENCIA, DATA_REFERENCIA)
+indiceAcumulado = 0.00
+dataLimiteMudancaRegimento = DATA("31/12/2008")
+dataInicioCobranca = lancamento.dataVencimento.copyWith(date: 01, month: lancamento.dataVencimento[Calendar.MONTH] + 1)
+dataFinalCobranca = MINIMO(lancamento.dataPagamento ?: DATA_REFERENCIA, DATA_REFERENCIA)
 
 //Correspondentes a 1% (um por cento) ao mês até dezembro de 2008
 if(dataInicioCobranca <= dataLimiteMudancaRegimento) {
-    def dataInicioCobranca1Porcento = MINIMO(dataInicioCobranca, dataLimiteMudancaRegimento)
-    def dataFinalCobranca1Porcento = MINIMO(dataFinalCobranca, dataLimiteMudancaRegimento)
-    def diferencaMeses = DATADIF(dataInicioCobranca1Porcento, dataFinalCobranca1Porcento, "M")
+    dataInicioCobranca1Porcento = MINIMO(dataInicioCobranca, dataLimiteMudancaRegimento)
+    dataFinalCobranca1Porcento = MINIMO(dataFinalCobranca, dataLimiteMudancaRegimento)
+    diferencaMeses = DATADIF(dataInicioCobranca1Porcento, dataFinalCobranca1Porcento, "M")
     indiceAcumulado = (dataInicioCobranca1Porcento <= dataFinalCobranca) ? MAXIMO((diferencaMeses + 1) / 100, 0.00) : 0.00
 }
 
 // A partir de janeiro de 2009, atualiza pela taxa referencial do SELIC, acumulada mensalmente, a partir do mês subsequente ao vencimento do prazo
-def dataInicioCobrancaSelic = MAXIMO(dataInicioCobranca, dataLimiteMudancaRegimento + 1)
-def dataFinalCobrancaSelic = MAXIMO(dataFinalCobranca, dataLimiteMudancaRegimento + 1)
+dataInicioCobrancaSelic = MAXIMO(dataInicioCobranca, dataLimiteMudancaRegimento + 1)
+dataFinalCobrancaSelic = MAXIMO(dataFinalCobranca, dataLimiteMudancaRegimento + 1)
 dataFinalCobrancaSelic = dataFinalCobrancaSelic.copyWith(date: 01, month: dataFinalCobrancaSelic[Calendar.MONTH]) - 1
 
 // ... e de um por cento no mês de pagamento

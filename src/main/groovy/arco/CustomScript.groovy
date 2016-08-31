@@ -46,6 +46,25 @@ abstract class CustomScript extends groovy.lang.Script {
         return dateFormat.parse(data)
     }
 
+    def DATA(int dia, int mes, int ano) {
+        return new Date(ano, mes, dia)
+    }
+
+    def ANO(Date dataReferencia) {
+        assert dataReferencia != null, "Parâmetro [dataReferencia] não pode ser nulo"
+        return dataReferencia[Calendar.YEAR]
+    }
+
+    def MES(Date dataReferencia) {
+        assert dataReferencia != null, "Parâmetro [dataReferencia] não pode ser nulo"
+        return dataReferencia[Calendar.MONTH]
+    }
+
+    def DIA(Date dataReferencia) {
+        assert dataReferencia != null, "Parâmetro [dataReferencia] não pode ser nulo"
+        return dataReferencia[Calendar.DATE]
+    }
+
     def DATA_ADICIONAR(Date dataReferencia, int quantidade, String unidade = "D") {
         assert dataReferencia != null, "Parâmetro [dataReferencia] não pode ser nulo"
         assert ["A", "M", "D"].contains(unidade), "Parâmetro [unidade] deve possuir um dos seguntes valores: 'D' (dia), 'M' (mẽs) ou 'A' (ano)"
@@ -105,6 +124,7 @@ abstract class CustomScript extends groovy.lang.Script {
     }
 
     //Funções disponíveis dentro do contexto de execução das fórmulas
+    //TODO: Caso a data inicial for maior que a data final, a função deverá retornar o valor 0
     def INDICE_ECONOMICO(String nomeIndice, Date dataInicial, Date dataFinal) {
         return 0
     }

@@ -15,15 +15,15 @@ package formulas.multaDeMora
 
 VALIDACAO(lancamento.dataVencimento != null, 'Data de vencimento não pode ser nulo')
 
-def dataResolucaoAnatel589_2012 = Date.parse("d/MM/yyyy", "17/05/2012")
+dataResolucaoAnatel589_2012 = Date.parse("d/MM/yyyy", "17/05/2012")
 if(!lancamento.houveSuspencaoExigibilidade && lancamento.dataCompetencia >= dataResolucaoAnatel589_2012){
 
     // Calcula quantidade de dias em atraso
-    def mesReferenciaFinal = MINIMO(lancamento.dataPagamento ?: DATA_REFERENCIA, DATA_REFERENCIA)
-    def diasEmAtraso = MAXIMO(mesReferenciaFinal - lancamento.dataVencimento, 0)
+    mesReferenciaFinal = MINIMO(lancamento.dataPagamento ?: DATA_REFERENCIA, DATA_REFERENCIA)
+    diasEmAtraso = MAXIMO(mesReferenciaFinal - lancamento.dataVencimento, 0)
 
     // Determina o percentual de multa a ser aplicado
-    def taxa = MINIMO(diasEmAtraso * 0.0033, 0.20)
+    taxa = MINIMO(diasEmAtraso * 0.0033, 0.20)
 
     // Calculo da multa de mora considerando apenas 2 casas decimais
     lancamento.multaMora = TRUNC((lancamento.valorOriginal * taxa), 2)

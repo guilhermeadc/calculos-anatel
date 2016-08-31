@@ -14,28 +14,28 @@ package formulas.correcaoMonetaria
  * União.
  **********************************************************************************************************/
 
-def dataResolucaoAnatel589_2012 = Date.parse("d/MM/yyyy", "17/05/2012")
+dataResolucaoAnatel589_2012 = Date.parse("d/MM/yyyy", "17/05/2012")
 if(lancamento.dataCompetencia < dataResolucaoAnatel589_2012
         && lancamento.houveSuspencaoExigibilidade) {
 
     // Considera a atualização deste a data de aplicação da sanção (data de competência)
-    def dataAplicacaoSancao = lancamento.dataCompetencia
+    dataAplicacaoSancao = lancamento.dataCompetencia
 
     //... até a data de publicação do extrato da decisão final no Diário Oficial da União ou a data atual
-    def dataPublicacaoDOU = MINIMO(parametros["DATA_PUBLICAOCAO_DOU"], DATA_REFERENCIA)
+    dataPublicacaoDOU = MINIMO(parametros["DATA_PUBLICAOCAO_DOU"], DATA_REFERENCIA)
 
     // Data de publicação da Medida Provisória 449/2008
-    def dataMedidaProvisoria449_2008 = Date.parse("d/MM/yyyy", "03/12/2008")
-    def dataLimiteCalculoIGPDI = Date.parse("d/MM/yyyy", "31/12/2008")
-    def dataLimiteCalculoSelic = Date.parse("d/MM/yyyy", "01/01/2009")
+    dataMedidaProvisoria449_2008 = Date.parse("d/MM/yyyy", "03/12/2008")
+    dataLimiteCalculoIGPDI = Date.parse("d/MM/yyyy", "31/12/2008")
+    dataLimiteCalculoSelic = Date.parse("d/MM/yyyy", "01/01/2009")
 
     // crédito deverá sofrer atualização monetária pelo índice IGP-DI desde a data de aplicação da sanção até dezembro de 2008
-    def indiceAcumuladoIGPDI = SE(dataAplicacaoSancao < dataMedidaProvisoria449_2008, INDICE_ECONOMICO("IGP-DI", dataAplicacaoSancao, dataLimiteCalculoIGPDI), 0.00)
+    indiceAcumuladoIGPDI = SE(dataAplicacaoSancao < dataMedidaProvisoria449_2008, INDICE_ECONOMICO("IGP-DI", dataAplicacaoSancao, dataLimiteCalculoIGPDI), 0.00)
     lancamento.atualizacaoMonetaria = lancamento.valorOriginal * MAXIMO(indiceAcumuladoIGPDI, 0.00)
 
     // a partir de janeiro de 2009, a correção pelo IGP-DI é substituída pela aplicação da SELIC até a
     // data de publicação do extrato da decisão final no Diário Oficial da União.
-    def dataInicioCalculoSelic = MAXIMO(dataLimiteCalculoSelic, dataAplicacaoSancao)
-    def indiceAcumuladoSelic = SE(dataPublicacaoDOU >= dataLimiteCalculoSelic, INDICE_ECONOMICO("SELIC", dataInicioCalculoSelic, dataPublicacaoDOU), 0.00)
+    dataInicioCalculoSelic = MAXIMO(dataLimiteCalculoSelic, dataAplicacaoSancao)
+    indiceAcumuladoSelic = SE(dataPublicacaoDOU >= dataLimiteCalculoSelic, INDICE_ECONOMICO("SELIC", dataInicioCalculoSelic, dataPublicacaoDOU), 0.00)
     lancamento.atualizacaoMonetaria += lancamento.valorOriginal * MAXIMO(indiceAcumuladoSelic, 0.00)
 }

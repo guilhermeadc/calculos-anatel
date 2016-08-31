@@ -13,12 +13,12 @@ package formulas.jurosDeMora
 
 VALIDACAO(lancamento.dataVencimento != null, 'Data de vencimento não pode ser nulo.')
 
-def dataLimiteMudancaRegimento = DATA("31/12/2008")
+dataLimiteMudancaRegimento = DATA("31/12/2008")
 
-def dataFinalCobranca = MINIMO(lancamento.dataPagamento ?: DATA_REFERENCIA, DATA_REFERENCIA)
-def diasEmAtraso = MAXIMO(dataFinalCobranca - lancamento.dataVencimento, 0)
+dataFinalCobranca = MINIMO(lancamento.dataPagamento ?: DATA_REFERENCIA, DATA_REFERENCIA)
+diasEmAtraso = MAXIMO(dataFinalCobranca - lancamento.dataVencimento, 0)
 
-def taxa = 0
+taxa = 0
 if(lancamento.dataVencimento > dataLimiteMudancaRegimento) {
     taxa = MINIMO(diasEmAtraso * 0.0033, 0.20)
 } else {
